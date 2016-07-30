@@ -1,0 +1,19 @@
+{
+  "name": "rulet",
+  "version": "0.0.0",
+  "description": "Create configurations based on rules and tags",
+  "main": "index.js",
+  "author": "Miguel Ángel Domínguez Coloma <m@eridem.net> (http://eridem.net)",
+  "constributors": [],
+  "license": "MIT",
+  "keywords": [
+    "configuration",
+    "config",
+    "tag",
+    "rule"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/eridem/rulet.git"
+  }
+}
