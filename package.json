@@ -1,6 +1,6 @@
 {
   "name": "rulet",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Create configurations based on rules and tags",
   "main": "index.js",
   "author": "Miguel Ángel Domínguez Coloma <m@eridem.net> (http://eridem.net)",
@@ -15,5 +15,22 @@
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/eridem/rulet.git"
+  },
+  "scripts": {
+    "postinstall": "tsd install",
+    "prepublish": "gulp npm:prepublish",
+    "pretest": "gulp npm:pretest",
+    "test": "gulp npm:test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.12.1",
+    "merge2": "^1.0.1",
+    "typescript": "^1.8.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0"
   }
 }
