@@ -21,15 +21,13 @@
     "pretest": "gulp npm:pretest",
     "test": "gulp npm:test"
   },
-  "dependencies": {
-    "chai": "^3.5.0",
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "chai": "^3.5.0",
     "gulp-typescript": "^2.12.1",
     "merge2": "^1.0.1",
     "typescript": "^1.8.9"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^2.2.0"
   }
 }
