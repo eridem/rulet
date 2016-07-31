@@ -62,4 +62,4 @@ class Rulet implements Models.IRulet {
   }
 }
 
-export { Rulet };
+module.exports = Rulet;

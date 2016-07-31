@@ -1,9 +1,9 @@
 /// <reference path="../typings/tsd.d.ts"/>
 
 import * as Models from '../src/rulet.d';
-import { Rulet } from '../src/index'
 import { expect } from 'chai';
 import * as Mocha from 'mocha';
+const Rulet = require('../src/index');
 
 describe('SingleSettingsSingleTags', () => {
     let rulet: Models.IRulet;

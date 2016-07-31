@@ -1,6 +1,6 @@
 {
   "name": "rulet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create configurations based on rules and tags",
   "main": "dist/src/index.js",
   "author": "Miguel Ángel Domínguez Coloma <m@eridem.net> (http://eridem.net)",
@@ -17,7 +17,6 @@
     "url": "https://bitbucket.org/eridem/rulet.git"
   },
   "scripts": {
-    "postinstall": "tsd install",
     "prepublish": "gulp npm:prepublish",
     "pretest": "gulp npm:pretest",
     "test": "gulp npm:test"

@@ -53,6 +53,12 @@ Another alternative could be the use of a ```common``` attribute, and reuse it i
 
 ### The solution
 
+```javascript
+'use strict'
+
+const Rulet = require('rulet')
+```
+
 With ```Rulet``` we organize the settings based on ```rules``` and ```tags```.
 
 - ```rules``` are JS conditions on the first level of an object. You can create any kind of condition using ```tags```. E.g:
@@ -82,42 +88,43 @@ With ```Rulet``` we organize the settings based on ```rules``` and ```tags```.
 A real example:
 
 ```javascript
+'use strict'
 
-const Rulet = require('rulet');
+const Rulet = require('rulet')
 
 let settings = {
-    "qa || prod": {
-        loginWrong: {
-            username: "Wrong", password: "wrong"
-        }
-    },
-    "(qa || prod) && firstApp": {
-        loginRight: {
-            username: "Right", password: "right"
-        }
-    },
-    "qa && secondApp": {
-        loginRight: {
-            username: "RightForSecondApp", password: "right"
-        }
-    },
-    "prod && secondApp": {
-        loginRight: {
-            username: "RightsForSecondAppInProd", password: "right"
-        }
+  'qa || prod': {
+    loginWrong: {
+      username: 'Wrong', password: 'wrong'
     }
-};
+  },
+  '(qa || prod) && firstApp': {
+    loginRight: {
+      username: 'Right', password: 'right'
+    }
+  },
+  'qa && secondApp': {
+    loginRight: {
+      username: 'RightForSecondApp', password: 'right'
+    }
+  },
+  'prod && secondApp': {
+    loginRight: {
+      username: 'RightsForSecondAppInProd', password: 'right'
+    }
+  }
+}
 
-let tags = ['qa', 'secondApp'];
+let tags = ['qa', 'secondApp']
 
-let rulet = new Rulet(settings, tags);
-let outConfiguration = rulet.getConfiguration();
+let rulet = new Rulet(settings, tags)
+let outConfiguration = rulet.getConfiguration()
 
-console.log(outConfiguration);
-/* Will print:
+console.log(outConfiguration)
+/* It will print:
     {
-        loginRight: { username: "RightForSecondApp", password: "right" },
-        loginWrong: { username: "Wrong", password: "wrong" }
+        loginWrong: { username: 'Wrong', password: 'wrong' },
+        loginRight: { username: 'RightForSecondApp', password: 'right' }
     }
 */
 

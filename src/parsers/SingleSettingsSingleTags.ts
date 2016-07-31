@@ -6,6 +6,7 @@ class SingleSettingsSingleTags implements Models.IParser {
   private _tags: Array<string>;
 
   public satisfaces(rulet: Models.IRulet, args: any[]): boolean {
+    this._rulet = rulet;
     let satisfaces = args && args.length === 2 && args[0] && args[1] && typeof args[0] === 'object' && args[1] instanceof Array;
 
     if (satisfaces) {
