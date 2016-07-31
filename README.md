@@ -65,6 +65,7 @@ With ```Rulet``` we organize the settings based on ```rules``` and ```tags```.
       // Rule 2
       "myTag3": { myAnotherSetting: 456 }
   };
+  ```
 
 - ```tags``` are use to fetch the desired information. ***Rulet*** will apply all ```rules``` from top to bottom, combining them.
 
@@ -82,7 +83,7 @@ A real example:
 
 ```javascript
 
-var Rulet = require('rulet');
+const Rulet = require('rulet');
 
 let settings = {
     "qa || prod": {
